@@ -14,12 +14,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         findViewById<Button>(R.id.button)
             .setOnClickListener {
-                val data = Repo.getCopy();
-                Toast.makeText(
-                    this,
-                    "value of is " + data.value1 + " " + data.value2,
-                    Toast.LENGTH_SHORT
-                ).show()
+                for (i in 1..2) {
+                    repeat(2) {
+                        val data = Repo.getCopy();
+                        Toast.makeText(
+                            this,
+                            "value of is " + data.value1 + " " + data.value2,
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
             }
     }
 
